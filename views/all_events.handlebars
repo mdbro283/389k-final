@@ -1,0 +1,15 @@
+<h2>Events</h2>
+<table>
+  <thead>
+    <tr>
+      <td>Arena</td><td>Date</td><td>Info</td>
+    </tr>
+  </thead>
+  {{#each e}}
+    <tr>
+      <td>{{this.arenaName}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.info}}</td>
+    </tr>
+  {{/each}}
+</table>

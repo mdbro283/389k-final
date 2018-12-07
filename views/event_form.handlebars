@@ -1,0 +1,55 @@
+<form id="event_form" action="/events" method="post"  >
+  <h3>Create a New Event</h3>
+  <table>
+    <tr>
+      <td>Arena: </td>
+      <td>
+        <select form="event_form" name="arena">
+          {{#each a}}
+          <option value="{{this}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Date: </td>
+      <td><input type="date" name="date" value=""></td>
+    </tr>
+    <!--<tr>
+      <td>Teams: </td>
+      <td>
+        <input id="team" type="text" name="team" value="">
+        <ol id="team-list">
+        </ol>
+        <input id="teams" type="hidden" name="teams" value="">
+      </td>
+    </tr>-->
+    <tr>
+      <td>Info: </td>
+      <td><textarea form="event_form" name="info" rows="4" cols="40"></textarea></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><input id="submit" type="submit" value="SUBMIT"></td>
+    </tr>
+  </table>
+</form>
+<script>
+  $(document).keypress(function(e){
+    if(e.which == '13') e.preventDefault();
+  });
+  var teams = [];
+  $('#team').bind("enterKey", function(e){
+    var team = $(this).val();
+    $(this).val("");
+    $("#team-list").append('<li>' + team + "</li>");
+    teams.push(team);
+    $('#teams').val(teams);
+  });
+  $('#team').keyup(function(e){
+    if(e.keyCode == 13) $(this).trigger("enterKey");
+  });
+  $('#submit').on('click', function(){
+    document.getElementById('event_form').submit();
+  });
+</script>

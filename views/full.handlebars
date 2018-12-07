@@ -1,0 +1,89 @@
+<!-- <head>
+  <script src-"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head> -->
+
+<input type="search" class="form-control" id="search" placeholder="Search Arenas...">
+<div id="data-area">
+  <h2>Arenas</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td><td>City</td><td>State</td><td>Country</td><td>Capacity</td>
+      </tr>
+    </thead>
+
+    {{#each a}}
+      <tr class="arena" id="{{this.name}}">
+        <td>{{this.name}}</td>
+        <td>{{this.city}}</td>
+        <td>{{this.state}}</td>
+        <td>{{this.country}}</td>
+        <td>{{this.capacity}}</td>
+      </tr>
+    {{/each}}
+
+  </table>
+  <h2>Events</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>Arena</td><td>Teams</td><td>Date</td><td>Info</td>
+      </tr>
+    </thead>
+    {{#each e}}
+      <tr>
+        <td>{{this.arenaName}}</td>
+        <<td>{{this.teams}}</td>
+        <td>{{this.date}}</td>
+        <td>{{this.info}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+<script>
+ /*$('#search').on('keyup', function(e){
+    $('#data-area').html("");
+    var text = $(this).val();
+    var res_html = "";
+     var areaNames = document.getElementsByClassName("arena");
+     console.log(areaNames);
+     for (let i of areaNames){
+       let n = i.id
+       console.log(n);
+       if(n.substring(0, text.length) == text){
+         console.log(i);
+         res_html += i;
+       }
+       else{
+         res_html += 'No Matches Found.';
+       }
+     }*/
+
+    // a way you can possibly see handlebars variables in javascript
+    // figure out a way to get that arena data in script ,maybe a function to load it
+  /*  a.forEach(function(ven){
+      if(ven.name.substring(0, text.length) == text){
+        res_html += '<li>' + ven.name + '</li>';
+      }
+      else{
+        res_html += 'No Matches Found.';
+      }
+    });
+
+    $('#data-area').html('<ol>' + res_html + '</ol>');*/
+  //});
+  $('#search').on('keyup', function(e){
+    $('#data-area').html("arena");
+    var text = $(this).val();
+    var res_html = "";
+    App.a.forEach(function(ven){
+      if(ven.name.substring(0, text.length) == text){
+        res_html += '<li>' + ven.name + '</li>';
+      }
+    });
+
+    $('#data-area').html('<ol>' + res_html + '</ol>');
+  });
+
+</script>

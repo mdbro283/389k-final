@@ -1,0 +1,43 @@
+<form id="arena_form" action="/arena" method="post">
+  <h3>New Arena Form</h3>
+  <table>
+    <tr>
+      <td>Name: </td>
+      <td><input type="text" name="name" value=""></td>
+    </tr>
+    <tr>
+      <td>City: </td>
+      <td><input type="text" name="city" value=""></td>
+    </tr>
+    <tr>
+      <td>State: </td>
+      <td><input type="text" name="state" value=""></td>
+    </tr>
+    <tr>
+      <td>Country: </td>
+      <td>
+        <select form="arena_form" name="country">
+          <option value="USA">USA</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Spain">Spain</option>
+          <option value="Italy">Italy</option>
+          <option value="UK">United Kingdom</option>
+          <option value="China">China</option>
+          <option value="Other">Other</option>
+
+
+        </select>
+      </td>
+      <td>Other: <input type="text" name="country" value=""></td>
+
+    </tr>
+    <tr>
+      <td>Capacity: </td>
+      <td><input type="text" name="capacity" value=""></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input id="submit" type="submit" value="SUBMIT"></td>
+    </tr>
+  </table>
+</form>
