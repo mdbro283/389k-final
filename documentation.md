@@ -9,7 +9,7 @@ Date: 12/07/2018
 
 Project Topic: Worldwide Sporting Event Planner
 
-URL:
+URL: https://brody-389k.herokuapp.com/
 
 ---
 
@@ -124,8 +124,9 @@ Search Field: `name`
 ### 5. Navigation Pages
 
 Navigation Filters
-1. All Arenas -> `/`
-2. Arenas in Maryland -> `/arenas_MD`
+1. Arenas in Maryland -> `/arenas_MD`
+2. Arenas in Virginia -> `/arenas_VA`
 3. Arenas Sorted by Size -> `/arenas_capacity`
 4. Sorted Arenas -> `/arenas_sorted`
 5. All Events -> `/all_events`
+6. Arenas in California -> `/arenas_CA`
