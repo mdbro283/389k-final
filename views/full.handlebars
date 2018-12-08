@@ -42,23 +42,43 @@
 </div>
 
 <script>
- /*$('#search').on('keyup', function(e){
-    $('#data-area').html("");
-    var text = $(this).val();
-    var res_html = "";
-     var areaNames = document.getElementsByClassName("arena");
-     console.log(areaNames);
-     for (let i of areaNames){
-       let n = i.id
-       console.log(n);
-       if(n.substring(0, text.length) == text){
-         console.log(i);
-         res_html += i;
-       }
-       else{
-         res_html += 'No Matches Found.';
-       }
-     }*/
+/*$('#search').on('keyup', function(e){
+  var arena = ($('.arena'));
+  var text = $(this).val();
+  console.log($('.arena'));
+
+  console.log("testtt");
+
+  for (row in arena){
+    // look into row cell, get cell at index 0 and compare with your search text
+
+    if(arena.row.cells[0] == text){
+      console.log(text);
+    }
+  }
+
+});*/
+
+
+ //
+ // $('#search').on('keyup', function(e){
+ //    $('#data-area').html("");
+ //    var text = $(this).val();
+ //    var res_html = "";
+ //     var areaNames = document.getElementsByClassName("arena");
+ //     console.log(areaNames);
+ //     for (let i of areaNames){
+ //       let n = i.id
+ //       console.log(n);
+ //       if(n.substring(0, text.length) == text){
+ //         console.log(i);
+ //         res_html += i;
+ //       }
+ //       else{
+ //         res_html += 'No Matches Found.';
+ //       }
+ //     }
+
 
     // a way you can possibly see handlebars variables in javascript
     // figure out a way to get that arena data in script ,maybe a function to load it
@@ -74,12 +94,12 @@
     $('#data-area').html('<ol>' + res_html + '</ol>');*/
   //});
   $('#search').on('keyup', function(e){
-    $('#data-area').html("arena");
+    $('#data-area').html("No Matches Found.");
     var text = $(this).val();
     var res_html = "";
-    App.a.forEach(function(ven){
-      if(ven.name.substring(0, text.length) == text){
-        res_html += '<li>' + ven.name + '</li>';
+    a.forEach(function(ar){
+      if(ar.name.substring(0, text.length) == text){
+        res_html += '<li>' + ar.name + '</li>';
       }
     });
 
