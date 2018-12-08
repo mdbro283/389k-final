@@ -1,0 +1,14 @@
+<h2>Arenas Located in California</h2>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td><td>Capacity</td>
+    </tr>
+  </thead>
+  {{#each a}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.capacity}}</td>
+    </tr>
+  {{/each}}
+</table>
