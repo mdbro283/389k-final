@@ -24,13 +24,13 @@ h1 {
 }
 h3, h2 {
   font-family: cursive;
-  /*text-align: center;*/
   color: #b3e6ff;
   border-style:ridge;
 }
 a {
   margin-left: 10px;
   margin-right: 10px;
+  padding: 5px;
   color: #b3e6ff;
   font-weight: 800;
   border-style:ridge;
@@ -38,6 +38,7 @@ a {
   border-radius: 15px;
   border-width: thick;
   border-spacing: 100px;
+  font-size: 15px;
 }
 a:hover{
   color: pink;
