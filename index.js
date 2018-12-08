@@ -51,13 +51,10 @@ app.get('/', function(req, res){
         res.render("full", {
           a_names: arena_names,
           a: arena_array,
-          //t: team_array,
           e: event_array
         });
       });
-    //});
   });
-  //res.send('<p>test</p>');
 
 });
 
@@ -151,6 +148,24 @@ app.get('/arenas_MD', function(req, res){
     if (err) throw err;
 
     res.render('arenas_MD', {a: arenas});
+  });
+
+});
+
+app.get('/arenas_VA', function(req, res){
+  model.Arena.find({state: "Virginia"}, function(err, arenas){
+    if (err) throw err;
+
+    res.render('arenas_VA', {a: arenas});
+  });
+
+});
+
+app.get('/arenas_CA', function(req, res){
+  model.Arena.find({state: "California"}, function(err, arenas){
+    if (err) throw err;
+
+    res.render('arenas_CA', {a: arenas});
   });
 
 });
